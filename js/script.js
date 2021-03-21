@@ -302,7 +302,7 @@ function funClickSave(EO) {
 
     }
     if (fieldNik.value in localHash && localStorage[fieldNik.value] > score) {
-        alert('пред счет больше');
+        alert('Предыдущий счет больше!');
         fieldNik.value = '';
     } else if (Number(fieldNik.value) == 0) {
         alert('Поле не может быть пустым!');
@@ -311,6 +311,7 @@ function funClickSave(EO) {
         window.localStorage.setItem(nik, score);
         fieldNik.value = '';
         fieldNik.placeholder = 'ваше имя..';
+        alert('Рекорд сохранен');
     }
     console.log(localHash);
 
